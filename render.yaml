@@ -2,20 +2,20 @@ services:
   - type: web
     name: ghl-custom-values-app
     env: node
-    buildCommand: npm run build
+    buildCommand: npm install
     startCommand: npm start
     envVars:
       - key: NODE_ENV
         value: production
       - key: GHL_APP_CLIENT_ID
-        fromDatabase: false
+        sync: false
       - key: GHL_APP_CLIENT_SECRET
-        fromDatabase: false
+        sync: false
       - key: GHL_API_DOMAIN
         value: https://services.leadconnectorhq.com
       - key: CLOUDINARY_CLOUD_NAME
-        fromDatabase: false
+        sync: false
       - key: CLOUDINARY_API_KEY
-        fromDatabase: false
+        sync: false
       - key: CLOUDINARY_API_SECRET
-        fromDatabase: false
+        sync: false
